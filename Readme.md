@@ -10,7 +10,6 @@ The **Smart Crop Advisory System** aims to solve this problem by providing farme
 
 This application empowers farmers to make informed decisions, improve crop productivity, and reduce financial risk.
 
----
 
 ## 🎯 Problem Statement
 
@@ -156,7 +155,6 @@ smart-crop-advisory-system
 * IoT sensor integration for soil monitoring
 * Real-time agricultural alerts
 
----
 
 ## 🌱 Impact
 
@@ -167,7 +165,6 @@ The Smart Crop Advisory System aims to:
 * Support sustainable agriculture
 * Empower farmers with technology
 
----
 
 ## 📜 License
 
