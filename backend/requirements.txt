@@ -1,0 +1,14 @@
+fastapi[standard]
+pydantic
+pydantic-settings
+python-multipart
+httpx
+pandas
+scikit-learn
+joblib
+numpy
+Pillow
+google-generativeai
+gTTS
+SpeechRecognition
+pydub

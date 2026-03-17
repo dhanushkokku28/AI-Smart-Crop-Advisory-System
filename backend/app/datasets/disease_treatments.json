@@ -1,0 +1,32 @@
+{
+    "Leaf Blight": {
+        "treatment": "Apply copper fungicide spray",
+        "prevention": "Avoid overhead irrigation, ensure proper plant spacing",
+        "severity": "medium",
+        "associated_crops": ["pepper", "rice"]
+    },
+    "Sigatoka": {
+        "treatment": "Use mancozeb or chlorothalonil",
+        "prevention": "Remove infected leaves and improve soil drainage",
+        "severity": "high",
+        "associated_crops": ["banana"]
+    },
+    "Anthracnose": {
+        "treatment": "Apply carbendazim or mancozeb",
+        "prevention": "Ensure good air circulation, prune infected parts",
+        "severity": "high",
+        "associated_crops": ["pepper", "banana"]
+    },
+    "Powdery Mildew": {
+        "treatment": "Use sulfur-based fungicide",
+        "prevention": "Improve air circulation, avoid excess nitrogen",
+        "severity": "low",
+        "associated_crops": ["coffee"]
+    },
+    "Healthy": {
+        "treatment": "No action needed",
+        "prevention": "Maintain regular watering and fertilizing schedule",
+        "severity": "none",
+        "associated_crops": ["pepper", "rice", "banana", "coffee", "coconut"]
+    }
+}
