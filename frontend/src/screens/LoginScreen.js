@@ -57,6 +57,7 @@ export default function LoginScreen({ navigation }) {
           onChangeText={setMobileNumber}
         />
         <PrimaryButton label="Send OTP" onPress={onSendOtp} loading={loading} />
+        <PrimaryButton label="Don't have an account? Sign Up" onPress={() => navigation.navigate('Signup')} variant="ghost" style={styles.guestButton} />
         <PrimaryButton label="Continue as Guest" onPress={onGuest} variant="ghost" style={styles.guestButton} />
       </View>
     </View>

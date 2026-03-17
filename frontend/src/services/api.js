@@ -67,6 +67,14 @@ export async function sendOtp(mobileNumber) {
   };
 }
 
+export async function registerFarmer(userData) {
+  return {
+    success: true,
+    message: `Account created successfully for ${userData.mobileNumber}.`,
+    user: userData,
+  };
+}
+
 export async function getCropRecommendations() {
   const { data } = await api.post('/crop/recommend', {
     district: 'Ernakulam',
