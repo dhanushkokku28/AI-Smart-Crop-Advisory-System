@@ -3,30 +3,241 @@
         "treatment": "Apply copper fungicide spray",
         "prevention": "Avoid overhead irrigation, ensure proper plant spacing",
         "severity": "medium",
-        "associated_crops": ["pepper", "rice"]
+        "associated_crops": ["pepper", "rice"],
+        "fertilizers": [
+            "Use balanced NPK 10-10-10 as basal nutrition",
+            "Apply potassium-rich fertilizer (MOP) to improve leaf strength",
+            "Add zinc sulfate if leaves show yellow striping"
+        ],
+        "fertilizer_plan": {
+            "default": [
+                {
+                    "name": "NPK 10-10-10",
+                    "dosage": "20-25 kg/acre",
+                    "interval_days": 20,
+                    "application_method": "Apply in soil near root zone",
+                    "note": ""
+                }
+            ],
+            "rice": [
+                {
+                    "name": "NPK 10-10-10",
+                    "dosage": "25 kg/acre",
+                    "interval_days": 20,
+                    "application_method": "Apply in standing water and drain after 24 hours",
+                    "note": ""
+                },
+                {
+                    "name": "MOP (Muriate of Potash)",
+                    "dosage": "10 kg/acre",
+                    "interval_days": 18,
+                    "application_method": "Top dress after light irrigation",
+                    "note": ""
+                },
+                {
+                    "name": "Zinc Sulfate",
+                    "dosage": "5 kg/acre",
+                    "interval_days": 30,
+                    "application_method": "Mix with topsoil before irrigation",
+                    "note": ""
+                }
+            ],
+            "pepper": [
+                {
+                    "name": "NPK 19-19-19",
+                    "dosage": "2 g/liter foliar spray",
+                    "interval_days": 15,
+                    "application_method": "Foliar spray in evening",
+                    "note": ""
+                },
+                {
+                    "name": "Calcium Nitrate",
+                    "dosage": "4 kg/acre",
+                    "interval_days": 20,
+                    "application_method": "Apply in ring around plant base",
+                    "note": ""
+                }
+            ]
+        }
     },
     "Sigatoka": {
         "treatment": "Use mancozeb or chlorothalonil",
         "prevention": "Remove infected leaves and improve soil drainage",
         "severity": "high",
-        "associated_crops": ["banana"]
+        "associated_crops": ["banana"],
+        "fertilizers": [
+            "Apply NPK 12-12-17 + Mg in split doses",
+            "Use magnesium sulfate to reduce leaf chlorosis",
+            "Add micronutrient mix containing boron and zinc"
+        ],
+        "fertilizer_plan": {
+            "default": [
+                {
+                    "name": "NPK 12-12-17 + Mg",
+                    "dosage": "50 g/plant",
+                    "interval_days": 30,
+                    "application_method": "Apply in ring around plant base",
+                    "note": ""
+                }
+            ],
+            "banana": [
+                {
+                    "name": "NPK 12-12-17 + Mg",
+                    "dosage": "75 g/plant",
+                    "interval_days": 30,
+                    "application_method": "Apply in ring around plant base",
+                    "note": ""
+                },
+                {
+                    "name": "Magnesium Sulfate",
+                    "dosage": "25 g/plant",
+                    "interval_days": 30,
+                    "application_method": "Mix with topsoil before irrigation",
+                    "note": ""
+                },
+                {
+                    "name": "Micronutrient Mix (Boron + Zinc)",
+                    "dosage": "10 g/plant",
+                    "interval_days": 40,
+                    "application_method": "Foliar spray in evening",
+                    "note": ""
+                }
+            ]
+        }
     },
     "Anthracnose": {
         "treatment": "Apply carbendazim or mancozeb",
         "prevention": "Ensure good air circulation, prune infected parts",
         "severity": "high",
-        "associated_crops": ["pepper", "banana"]
+        "associated_crops": ["pepper", "banana"],
+        "fertilizers": [
+            "Use compost-enriched organic manure for root health",
+            "Apply NPK 19-19-19 as foliar feed every 15 days",
+            "Use calcium nitrate during active growth to reduce fruit spot risk"
+        ],
+        "fertilizer_plan": {
+            "default": [
+                {
+                    "name": "NPK 19-19-19",
+                    "dosage": "2 g/liter foliar spray",
+                    "interval_days": 15,
+                    "application_method": "Foliar spray in evening",
+                    "note": ""
+                }
+            ],
+            "pepper": [
+                {
+                    "name": "Compost Enriched Manure",
+                    "dosage": "200 kg/acre",
+                    "interval_days": 30,
+                    "application_method": "Mix with compost and broadcast",
+                    "note": ""
+                },
+                {
+                    "name": "NPK 19-19-19",
+                    "dosage": "2 g/liter foliar spray",
+                    "interval_days": 15,
+                    "application_method": "Foliar spray in evening",
+                    "note": ""
+                },
+                {
+                    "name": "Calcium Nitrate",
+                    "dosage": "4 kg/acre",
+                    "interval_days": 20,
+                    "application_method": "Apply in ring around plant base",
+                    "note": ""
+                }
+            ],
+            "banana": [
+                {
+                    "name": "NPK 12-12-17 + Mg",
+                    "dosage": "60 g/plant",
+                    "interval_days": 30,
+                    "application_method": "Apply in ring around plant base",
+                    "note": ""
+                },
+                {
+                    "name": "Calcium Nitrate",
+                    "dosage": "30 g/plant",
+                    "interval_days": 25,
+                    "application_method": "Mix with topsoil before irrigation",
+                    "note": ""
+                }
+            ]
+        }
     },
     "Powdery Mildew": {
         "treatment": "Use sulfur-based fungicide",
         "prevention": "Improve air circulation, avoid excess nitrogen",
         "severity": "low",
-        "associated_crops": ["coffee"]
+        "associated_crops": ["coffee"],
+        "fertilizers": [
+            "Reduce high-nitrogen urea applications",
+            "Use balanced NPK 17-17-17 in low dose",
+            "Apply biofertilizer with Trichoderma for soil support"
+        ],
+        "fertilizer_plan": {
+            "default": [
+                {
+                    "name": "NPK 17-17-17",
+                    "dosage": "15-20 kg/acre",
+                    "interval_days": 25,
+                    "application_method": "Apply in soil near root zone",
+                    "note": ""
+                }
+            ],
+            "coffee": [
+                {
+                    "name": "NPK 17-17-17",
+                    "dosage": "20 kg/acre",
+                    "interval_days": 25,
+                    "application_method": "Apply in soil near root zone",
+                    "note": ""
+                },
+                {
+                    "name": "Trichoderma Biofertilizer",
+                    "dosage": "2 kg/acre",
+                    "interval_days": 20,
+                    "application_method": "Apply in moist soil",
+                    "note": ""
+                }
+            ]
+        }
     },
     "Healthy": {
         "treatment": "No action needed",
         "prevention": "Maintain regular watering and fertilizing schedule",
         "severity": "none",
-        "associated_crops": ["pepper", "rice", "banana", "coffee", "coconut"]
+        "associated_crops": ["pepper", "rice", "banana", "coffee", "coconut"],
+        "fertilizers": [
+            "Continue crop-specific NPK schedule",
+            "Add vermicompost once every 20-30 days",
+            "Use micronutrient foliar spray once per month"
+        ],
+        "fertilizer_plan": {
+            "default": [
+                {
+                    "name": "NPK (Crop Specific)",
+                    "dosage": "As per soil test",
+                    "interval_days": 30,
+                    "application_method": "Apply in split doses",
+                    "note": ""
+                },
+                {
+                    "name": "Vermicompost",
+                    "dosage": "100 kg/acre",
+                    "interval_days": 25,
+                    "application_method": "Mix with compost and broadcast",
+                    "note": ""
+                },
+                {
+                    "name": "Micronutrient Foliar Mix",
+                    "dosage": "2 g/liter foliar spray",
+                    "interval_days": 30,
+                    "application_method": "Foliar spray in evening",
+                    "note": ""
+                }
+            ]
+        }
     }
 }

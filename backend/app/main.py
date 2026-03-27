@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from app.routers import (
     farm_router,
     crop_router,
@@ -15,6 +16,13 @@ app = FastAPI(
     title="Smart Crop Advisory System API",
     description="Backend API for location-aware agricultural guidance.",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(farm_router.router)

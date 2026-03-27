@@ -109,9 +109,10 @@ export async function getWeatherToday({ lat = 10.8505, lon = 76.2711 } = {}) {
   };
 }
 
-export async function detectDisease({ imageUri, cropName = 'paddy' }) {
+export async function detectDisease({ imageUri, cropName = 'rice', language = 'english' }) {
   const formData = new FormData();
   formData.append('crop_name', cropName);
+  formData.append('language', language);
   formData.append('image', {
     uri: imageUri,
     type: 'image/jpeg',
@@ -124,10 +125,29 @@ export async function detectDisease({ imageUri, cropName = 'paddy' }) {
 
   return {
     disease_name: data?.disease || 'Unknown disease',
+    disease_display_name: data?.disease_display_name || data?.disease || 'Unknown disease',
     confidence: (data?.confidence || 0) * 100,
     treatment: data?.treatment || 'Consult agronomist',
     prevention: data?.prevention || '',
     severity: data?.severity || '',
+    fertilizers: Array.isArray(data?.fertilizers) ? data.fertilizers : [],
+    fertilizer_plan: Array.isArray(data?.fertilizer_plan) ? data.fertilizer_plan : [],
+    language: data?.language || language,
+    model_name: data?.model_name || '',
+    model_source: data?.model_source || '',
+  };
+}
+
+export async function getDiseaseModelStatus() {
+  const { data } = await api.get('/disease/model-status');
+  return {
+    model_name: data?.model_name || 'Unknown',
+    model_source: data?.model_source || 'runtime',
+    model_version: data?.model_version || '',
+    model_path: data?.model_path || '',
+    training_data_dir: data?.training_data_dir || '',
+    training_data_available: Boolean(data?.training_data_available),
+    supported_languages: Array.isArray(data?.supported_languages) ? data.supported_languages : [],
   };
 }
 
